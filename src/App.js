@@ -1,7 +1,7 @@
 import './App.css';
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
-import Map from "./pages/Map";
+import Main from "./pages/Main";
 import { Routes, Route, HashRouter } from "react-router-dom";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
           <Routes >
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/map" element={<Map />} />
+            <Route path="/main" element={<Main />} />
           </Routes>
         </HashRouter>
       }

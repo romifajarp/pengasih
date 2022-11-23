@@ -1,0 +1,10 @@
+{
+  "SERVER_API": "-",
+  "SERVER_GEOSERVER": "http://localhost:8080/",
+  "Simpan": {
+    "SERVER_API_Develop": "-",
+    "SERVER_GEOSERVER_Develop": "http://localhost:8080/",
+    "SERVER_API": "-",
+    "SERVER_GEOSERVER": "-"
+  }
+}

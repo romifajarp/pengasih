@@ -14,8 +14,7 @@ const Video = () => {
         <p> Sistem Informasi Geospasial Desa Pengasih</p>
 
         <div className='button'>
-          <Link to='/map' className='btn'>Peta</Link>
-          <Link to='/dashboard' className='btn btn-light'>Dashboard</Link>
+          <Link to='/main' className='btn'>Peta</Link>
         </div>
       </div>
     </div>
