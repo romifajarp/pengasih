@@ -127,7 +127,7 @@ function Map({
 
       <CustomWMSLayer
           url={configApi.SERVER_GEOSERVER + "geoserver/PRGG/wms"}
-          layers={"PRGG:Dusun_Ngento"}
+          layers={"PRGG:mskn"}
           options={{
             format: "image/png",
             transparent: "true",
