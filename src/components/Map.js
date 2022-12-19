@@ -6,6 +6,7 @@ import configApi from "./config.json"
 import L from "leaflet";
 import "./Map.css"
 
+
 function Map({
   basemap,
   opacityBasemap,
@@ -45,7 +46,7 @@ function Map({
   useEffect(() => {
     if (map) {
       map.target.eachLayer(function (layer) {
-        if (layer._name === "pengasih:bangunan") {
+        if (layer._name === "PRGG:BGN_Pengasih") {
           layer.setOpacity(opacityBangunan * 0.01)
           /* } else if (layer._name === "pengasih:batas_desa") {
             layer.setOpacity(opacityBatas * 0.01)
@@ -69,6 +70,22 @@ function Map({
     return null;
   }
 
+  fetch(
+    "http://localhost:8080/geoserver/PRGG/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=PRGG%3ADusun_Ngento&outputFormat=application%2Fjson",
+    {mode: "cors"}
+  )
+    .then(res => res.json())
+    .then(data => {
+      return L.geoJSON(data, {
+        onEachFeature: function(feature, layer) {
+          layer.bindPopup(feature.properties.name);
+        }
+      }).addTo(map);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+     
   return (
     <div classname="w-screen h-screen z-0">
       <MapContainer
@@ -81,9 +98,10 @@ function Map({
       >
         {change ? <TileLayerHandler /> : <TileLayer ref={tileRef} url={basemap} style={{ opacity: "0.5" }} maxZoom={22} />}
 
+
         <CustomWMSLayer
-          url={configApi.SERVER_GEOSERVER + "geoserver/pengasih/wms"}
-          layers={"pengasih:bangunan"}
+          url={configApi.SERVER_GEOSERVER + "geoserver/PRGG/wms"}
+          layers={"PRGG:BGN_Pengasih"}
           options={{
             format: "image/png",
             transparent: "true",
@@ -94,6 +112,33 @@ function Map({
           }}
         />
 
+        <CustomWMSLayer
+          url={configApi.SERVER_GEOSERVER + "geoserver/PRGG/wms"}
+          layers={"PRGG:Batas_desa"}
+          options={{
+            format: "image/png",
+            transparent: "true",
+            tiled: "false",
+            identify: false,
+            maxZoom: 22,
+            opacity: 0.8
+          }}
+        />
+
+      <CustomWMSLayer
+          url={configApi.SERVER_GEOSERVER + "geoserver/PRGG/wms"}
+          layers={"PRGG:Dusun_Ngento"}
+          options={{
+            format: "image/png",
+            transparent: "true",
+            tiled: "false",
+            identify: false,
+            maxZoom: 22,
+            opacity: 0.8
+          }}
+        />
+
+ 
       </MapContainer>
     </div>
   )
