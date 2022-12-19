@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/pengasih/static/css/main.92e0efb9.css",
+    "main.js": "/pengasih/static/js/main.0cce2e20.js",
+    "static/js/787.2182cbee.chunk.js": "/pengasih/static/js/787.2182cbee.chunk.js",
+    "static/media/drone-footage.mp4": "/pengasih/static/media/drone-footage.3158f3879bda14c5a43e.mp4",
+    "static/media/OpenToPo.jpg": "/pengasih/static/media/OpenToPo.cb174cbf024def5550c7.jpg",
+    "static/media/GoogleMaps.jpg": "/pengasih/static/media/GoogleMaps.04fc8c40672334167840.jpg",
+    "static/media/OpenStreetMap.jpg": "/pengasih/static/media/OpenStreetMap.7539382d01e6918b0edf.jpg",
+    "static/media/EsriWorldImagenery.jpg": "/pengasih/static/media/EsriWorldImagenery.25662325fb7f4d431982.jpg",
+    "static/media/GoogleStreet.jpg": "/pengasih/static/media/GoogleStreet.03ee3dbde65ae7bd1149.jpg",
+    "static/media/StadiaDark.jpg": "/pengasih/static/media/StadiaDark.877541bf4605bd9826c6.jpg",
+    "static/media/EsriToPo.jpg": "/pengasih/static/media/EsriToPo.57f0ba968eba41d0805b.jpg",
+    "static/media/EsriStreetMap.jpg": "/pengasih/static/media/EsriStreetMap.82aa2291c10b5fed197f.jpg",
+    "static/media/CartoDb.jpg": "/pengasih/static/media/CartoDb.b7c100c373e0be5c900d.jpg",
+    "index.html": "/pengasih/index.html",
+    "main.92e0efb9.css.map": "/pengasih/static/css/main.92e0efb9.css.map",
+    "main.0cce2e20.js.map": "/pengasih/static/js/main.0cce2e20.js.map",
+    "787.2182cbee.chunk.js.map": "/pengasih/static/js/787.2182cbee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92e0efb9.css",
+    "static/js/main.0cce2e20.js"
+  ]
+}
